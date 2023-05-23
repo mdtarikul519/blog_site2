@@ -15,13 +15,15 @@
                                 </tr>
                             </div>
                             <div class="tbody">
-                                 {{-- @dd($all_data) --}}
+                                 @dd($all_data)
                             @foreach ($all_data as $item)
                               <tr>
                                 <td>{{ $item->p_header }}</td>
                                 <td>{{ $item->header }}</td>
                                 <td>{{ $item->description }}</td>
                                 <td>{{ $item->image }}</td>
+
+                                /
                               </tr>
                                 
                             @endforeach
