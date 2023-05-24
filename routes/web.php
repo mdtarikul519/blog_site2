@@ -37,6 +37,9 @@ Route::group(['prefix' => 'banner','namespace' => 'Admin'], function () {
     Route::get('/create', 'BannerController@create')->name('dashboard.banner.create');
     Route::post('/store', 'BannerController@store')->name('dashboard.banner.store');
     Route::get('/view', 'BannerController@view')->name('dashboard.banner.view');
+    Route::get('/edit/{id}', 'BannerController@edit')->name('dashboard.banner.edit');
+    Route::post('/update/{id}','BannerController@update')->name('dashboard.banner.update');
+    Route::get('/destory/{id}','BannerController@destory')->name('dashboard.banner.destory');
 
 });
 

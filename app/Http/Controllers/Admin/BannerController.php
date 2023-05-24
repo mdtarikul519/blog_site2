@@ -17,12 +17,10 @@ class BannerController extends Controller
    public function store(Request $request){
         // dd(request()->all());
     $data = new Banner();
-
-    
     $data->p_header = request()->p_header;
     $data->header  = request()->header;
     $data->description = request()->description;
-    $data->image = Storage::put('/banner_upload', request()->file('image'));
+    $data->image = Storage::put('/banner_upload',request()->file('image'));
     $data->save();
     return redirect()->route('dashboard.banner.view');
        
@@ -33,4 +31,26 @@ class BannerController extends Controller
       $all_data = Banner::get();
       return view('admin.banner.view',compact('all_data'));
    }
+
+    public function edit($id){
+            $editdata = Banner::find($id);
+           return view('admin.banner.edit',compact('editdata'));
+    }
+
+
+    public function update(){
+           $data = Banner::find(request()->id);
+
+           $data->p_header = request()->p_header;
+           $data->header = request()->header;
+           $data->description = request()->description;
+           $data->image=Storage::put('/banner_upload',request()->file('image'));
+           $data->save();
+           return redirect()->route('dashboard.banner.view');
+    }
+
+    public function destory($id){
+       Banner::where('id',$id)->delete();
+       return redirect()->back();
+    }
 }

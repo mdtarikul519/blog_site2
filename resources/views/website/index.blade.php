@@ -40,7 +40,7 @@
     <div class="contentwrapper headerpartbg">
         <div class="content headerpartbody">
             <div class="logo">
-                <a href="#"><img src=" {{ asset('contents/website')}}/images/Beatles.png" alt=""></a>
+               [ <a href="#"><img src=" {{ asset('contents/website')}}/images/Beatles.png" alt=""></a>]
             </div>
             <div class="nav">
                 <ul>
@@ -63,13 +63,14 @@
     <!--     banner part start -->
     <!--    -------------------------------->
 
-    <div class="contentwrapper banenrbg">
+    <div class="contentwrapper banenrbg" style="background-image: url('{{ $data->image }}')">
         <div class="banneroverlay">
             <div class="content bannerbody">
                 <div class="bannercontent">
-                    <h4>hi! we are</h4>
-                    <h2>creative designer</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+
+                    <h4>{{ $data->p_header }}</h4>
+                    <h2>{{ $data->header }}</h2>
+                    <p>{{ $data->description }}</p>
                     <a href="#">hire us</a>
                     <a href="#">contact</a>
                 </div>
