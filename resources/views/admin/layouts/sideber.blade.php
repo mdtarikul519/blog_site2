@@ -13,7 +13,7 @@
                 <li class="menu-item-has-children dropdown">
                     <a href=" {{ asset('contents/admin') }}/#" class="dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"> <i
-                            class="menu-icon fa fa-cogs"></i>About section</a>
+                            class="menu-icon fa fa-cogs"></i>Banner section</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="fa fa-puzzle-piece"></i><a
                                 href="{{ route('dashboard.banner.create') }}">banner create</a>
@@ -21,11 +21,66 @@
                                
                         </li>
                         <li><i class="fa fa-puzzle-piece"></i><a
-                            href="{{ route('dashboard.banner.view') }}">About view</a>
+                            href="{{ route('dashboard.banner.view') }}">banner view</a>
                            
                     </li>
                     </ul>
                 </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href=" {{ asset('contents/admin') }}/#" class="dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"> <i
+                            class="menu-icon fa fa-cogs"></i>About section</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-puzzle-piece"></i><a
+                                href="{{ route('dashboard.about.create') }}">about create</a>
+                                            
+                               
+                        </li>
+                        <li><i class="fa fa-puzzle-piece"></i><a
+                            href="{{ route('dashboard.about.view') }}">About view</a>
+                           
+                    </li>
+                    </ul>
+                </li>
+
+
+                <li class="menu-item-has-children dropdown">
+                    <a href=" {{ asset('contents/admin') }}/#" class="dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"> <i
+                            class="menu-icon fa fa-cogs"></i>Services section</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-puzzle-piece"></i><a
+                                href="{{ route('dashboard.services.create') }}">Services create</a>
+                                            
+                               
+                        </li>
+                        <li><i class="fa fa-puzzle-piece"></i><a
+                            href="{{ route('dashboard.services.view') }}">Services view</a>
+                           
+                    </li>
+                    </ul>
+                </li>
+
+                
+
+                <li class="menu-item-has-children dropdown">
+                    <a href=" {{ asset('contents/admin') }}/#" class="dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"> <i
+                            class="menu-icon fa fa-cogs"></i>Protfolio section</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-puzzle-piece"></i><a
+                                href="{{ route('dashboard.protfolio.create') }}">Protfolio create</a>
+                                            
+                               
+                        </li>
+                        <li><i class="fa fa-puzzle-piece"></i><a
+                            href="{{ route('dashboard.protfolio.view') }}">Protfolio view</a>
+                           
+                    </li>
+                    </ul>
+                </li
+
 
             </ul>
         </div>

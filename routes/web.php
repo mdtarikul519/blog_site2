@@ -44,6 +44,37 @@ Route::group(['prefix' => 'banner','namespace' => 'Admin'], function () {
 });
 
 
+
+Route::group( ['prefix'=>'about','namespace'=>'Admin' ], function(){
+    Route::get('/create','AboutController@create')->name('dashboard.about.create');
+    Route::post('/store','AboutController@store')->name('dashboard.about.store');
+    Route::get('/view','AboutController@view')->name('dashboard.about.view');
+    Route::get('/edit/{id}','AboutController@edit')->name('dashboard.about.edit');
+    Route::post('/update/{id}','AboutController@update')->name('dashboard.about.update');
+    Route::get('/destory/{id}','AboutController@destory')->name('dashboard.about.destory');
+});
+
+
+
+Route::group( ['prefix'=>'services','namespace'=>'Admin' ], function(){
+    Route::get('/create','ServicesController@create')->name('dashboard.services.create');
+    Route::post('/store','ServicesController@store')->name('dashboard.services.store');
+    Route::get('/view','ServicesController@view')->name('dashboard.services.view');
+    Route::get('/edit/{id}','ServicesController@edit')->name('dashboard.services.edit');
+    Route::post('/update/{id}','ServicesController@update')->name('dashboard.services.update');
+    Route::get('/destory/{id}','ServicesController@destory')->name('dashboard.services.destory');
+});
+
+Route::group( ['prefix'=>'protfolio','namespace'=>'Admin' ], function(){
+    Route::get('/create','ProtfolioController@create')->name('dashboard.protfolio.create');
+    Route::post('/store','ProtfolioController@store')->name('dashboard.protfolio.store');
+    Route::get('/view','ProtfolioController@view')->name('dashboard.protfolio.view');
+    Route::get('/edit/{id}','ProtfolioController@edit')->name('dashboard.protfolio.edit');
+    Route::post('/update/{id}','ProtfolioController@update')->name('dashboard.protfolio.update');
+    Route::get('/destory/{id}','ProtfolioController@destory')->name('dashboard.protfolio.destory');
+});
+
+
 // Route::group(['prefix' => 'about','namespace' => 'Admin'], function () {
 //       Route::get('/create', 'AboutController@create')->name('dashboard.about.create');
 //       Route::post('/store', 'AboutController@store')->name('dashboard.about.store');

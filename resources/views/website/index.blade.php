@@ -40,7 +40,7 @@
     <div class="contentwrapper headerpartbg">
         <div class="content headerpartbody">
             <div class="logo">
-               [ <a href="#"><img src=" {{ asset('contents/website')}}/images/Beatles.png" alt=""></a>]
+                <a href="#"><img src=" {{ asset('contents/website')}}/images/Beatles.png" alt=""></a>
             </div>
             <div class="nav">
                 <ul>
