@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Website\WebsiteController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,6 +74,17 @@ Route::group( ['prefix'=>'protfolio','namespace'=>'Admin' ], function(){
     Route::post('/update/{id}','ProtfolioController@update')->name('dashboard.protfolio.update');
     Route::get('/destory/{id}','ProtfolioController@destory')->name('dashboard.protfolio.destory');
 });
+
+Route::group( ['prefix'=>'team','namespace'=>'Admin' ], function(){
+    Route::get('/create','TeamController@create')->name('dashboard.team.create');
+    Route::post('/store','TeamController@store')->name('dashboard.team.store');
+    Route::get('/view','TeamController@view')->name('dashboard.team.view');
+    Route::get('/edit/{id}','TeamController@edit')->name('dashboard.team.edit');
+    Route::post('/update/{id}','TeamController@update')->name('dashboard.team.update');
+    Route::get('/destory/{id}','TeamController@destory')->name('dashboard.team.destory');
+});
+
+
 
 
 // Route::group(['prefix' => 'about','namespace' => 'Admin'], function () {
