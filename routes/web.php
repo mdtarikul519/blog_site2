@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [WebsiteController::class, 'index']);
+Route::get('/about', [WebsiteController::class, 'about'])->name('website.about');;
 
 route::group(['prfix' => 'admin', 'Middleware' => ['auth'], 'namespace' => 'admin'], function () {
 
@@ -83,6 +84,16 @@ Route::group( ['prefix'=>'team','namespace'=>'Admin' ], function(){
     Route::post('/update/{id}','TeamController@update')->name('dashboard.team.update');
     Route::get('/destory/{id}','TeamController@destory')->name('dashboard.team.destory');
 });
+
+Route::group( ['prefix'=>'testmonial','namespace'=>'Admin' ], function(){
+    Route::get('/create','TestmonialController@create')->name('dashboard.testmonial.create');
+    Route::post('/store','TestmonialController@store')->name('dashboard.testmonial.store');
+    Route::get('/view','TestmonialController@view')->name('dashboard.testmonial.view');
+    Route::get('/edit/{id}','TestmonialController@edit')->name('dashboard.testmonial.edit');
+    Route::post('/update/{id}','TestmonialController@update')->name('dashboard.testmonial.update');
+    Route::get('/destory/{id}','TestmonialController@destory')->name('dashboard.testmonial.destory');
+});
+
 
 
 

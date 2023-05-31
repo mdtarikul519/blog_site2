@@ -35,10 +35,9 @@ class AboutController extends Controller
 
     public function update(){
         $data = About::find(request()->id);
-
         $data->title = request()->title;
         $data->description = request()->description;
-        $data->image=Storage::put('/banner_upload',request()->file('image'));
+        $data->image=Storage::put('/about_upload',request()->file('image'));
         $data->save();
         return redirect()->route('dashboard.about.view');
  }

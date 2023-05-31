@@ -94,7 +94,8 @@
                 </div>
             </div>
             <div class="leftimage">
-                <img src=" {{ asset('contents/website')}}/images/about-us-left-image.png" alt="aboutus">
+                {{-- <img src=" {{ asset }} url('{{ $data->image }}')/images/about-us-left-image.png" alt="aboutus"> --}}
+                <img src="/{{$data->image }}">
             </div>
             <div class="rightcontens">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
