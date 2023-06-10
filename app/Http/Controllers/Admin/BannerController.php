@@ -15,12 +15,13 @@ class BannerController extends Controller
    }
 
    public function store(Request $request){
-        // dd(request()->all());
+         // dd(request()->all());
     $data = new Banner();
-    $data->p_header = request()->p_header;
-    $data->header  = request()->header;
-    $data->description = request()->description;
-    $data->image = Storage::put('/banner_upload',request()->file('image'));
+   //  $data->p_header = 'data';
+    
+     $data->header  = request()->header;
+     $data->description = request()->description;
+     $data->image=Storage::put('/banner_upload',request()->file('image'));
     $data->save();
     return redirect()->route('dashboard.banner.view');
        
@@ -40,13 +41,13 @@ class BannerController extends Controller
 
     public function update(){
            $data = Banner::find(request()->id);
-
-           $data->p_header = request()->p_header;
-           $data->header = request()->header;
-           $data->description = request()->description;
-           $data->image=Storage::put('/banner_upload',request()->file('image'));
-           $data->save();
-           return redirect()->route('dashboard.banner.view');
+ 
+         //   $data->p_header = 'header';
+              $data->header = request()->header;
+              $data->description = request()->description;
+              $data->image=Storage::put('/banner_upload',request()->file('image'));
+              $data->save();
+             return redirect()->route('dashboard.banner.view');
     }
 
     public function destory($id){

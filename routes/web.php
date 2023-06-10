@@ -23,6 +23,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [WebsiteController::class, 'index']);
+Route::get('/test', [WebsiteController::class, 'test']);
+Route::get('/delete_test/{id}', [WebsiteController::class, 'delete_test']);
+Route::get('/recycle_bin', [WebsiteController::class, 'recycle_bin']);
+Route::get('/restore/{id}', [WebsiteController::class, 'restore']);
+
+
 Route::get('/about', [WebsiteController::class, 'about'])->name('website.about');;
 
 route::group(['prfix' => 'admin', 'Middleware' => ['auth'], 'namespace' => 'admin'], function () {
@@ -95,6 +101,11 @@ Route::group( ['prefix'=>'testmonial','namespace'=>'Admin' ], function(){
 });
 
 
+
+  Route::group(['prefix' => 'relation', 'namespace' => 'Admin'], function(){
+               
+            Route::get('/index', 'RelationController@index')->name('dashboard.relation.index');
+  });
 
 
 

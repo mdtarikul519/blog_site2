@@ -13,7 +13,7 @@ class TeamController extends Controller
         return view('admin.team.cerate');
     }
 
-    public function store(){
+    public function store(){ 
         // dd(request()->all());
         $data = new Team();
         
@@ -58,3 +58,7 @@ class TeamController extends Controller
          return redirect()->back();
     }
 }
+
+
+
+ 
